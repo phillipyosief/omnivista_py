@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omnivista_py_phillipyosief"
+version = "0.3.6"
+authors = [
+  { name="Phillip Jerome Yosief", email="phillip.yosief@outlook.com" },
+]
+description = "A Python library that simplifies interaction with the OmniVista API, enabling easy authentication, device management, and performance data querying."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/phillipyosief/omnivista_py"
+Issues = "https://github.com/phillipyosief/omnivista_py/issues"

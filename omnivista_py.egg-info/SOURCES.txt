@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+omnivista_py/__init__.py
+omnivista_py/exceptions.py
+omnivista_py/omnivista.py
+omnivista_py.egg-info/PKG-INFO
+omnivista_py.egg-info/SOURCES.txt
+omnivista_py.egg-info/dependency_links.txt
+omnivista_py.egg-info/top_level.txt

@@ -4,7 +4,6 @@
 ![PyPI - Version](https://img.shields.io/pypi/v/omnivista_py)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/omnivista_py)
 ![PyPI - Wheel](https://img.shields.io/pypi/wheel/omnivista_py)
-[![Upload Python Package](https://github.com/phillipyosief/omnivista_py/actions/workflows/python-publish.yml/badge.svg)](https://github.com/phillipyosief/omnivista_py/actions/workflows/python-publish.yml)
 
 omnivista_py allows easy management of network devices, and querying of performance data. With integrated error handling and optional logging
 
@@ -41,8 +40,6 @@ for device in devices:
     print(device.get_ip_interfaces())
     print(device.get_running_directory())
 ```
-
-You can find more examples [here]()
 
 ## Future Plans
 There are several features and improvements planned for future releases of omnivita_py.

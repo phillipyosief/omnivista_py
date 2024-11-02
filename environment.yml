@@ -1,0 +1,9 @@
+name: omnivista_env
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - requests
+  - pip
+  - pip:
+    - omnivista_py

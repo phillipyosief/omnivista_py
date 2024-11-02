@@ -1,4 +1,4 @@
-# OmniVista API Client
+# omnivista_py
 
 `omnivista_py` is a Python library that simplifies interaction with the OmniVista API. It allows easy authentication with a username and password, management of network devices, and querying of performance data. With integrated error handling and optional logging, the client provides developers with an effective tool for automating and monitoring network infrastructures.
 

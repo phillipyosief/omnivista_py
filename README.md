@@ -1,92 +1,66 @@
-# omnivista_py
+# omnivista_py - An API Client for the Alcatel-Lucent OmniVista 2500
+> a Python library that simplifies interaction with the OmniVista API.
 
-`omnivista_py` is a Python library that simplifies interaction with the OmniVista API. It allows easy authentication with a username and password, management of network devices, and querying of performance data. With integrated error handling and optional logging, the client provides developers with an effective tool for automating and monitoring network infrastructures.
+![PyPI - Version](https://img.shields.io/pypi/v/omnivista_py)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/omnivista_py)
+![PyPI - Wheel](https://img.shields.io/pypi/wheel/omnivista_py)
+[![Upload Python Package](https://github.com/phillipyosief/omnivista_py/actions/workflows/python-publish.yml/badge.svg)](https://github.com/phillipyosief/omnivista_py/actions/workflows/python-publish.yml)
+
+omnivista_py allows easy management of network devices, and querying of performance data. With integrated error handling and optional logging
 
 ## Installation
 
-To install the library, use pip:
-
+Using [PyPi](https://pypi.org/project/omnivista-py/)
 ```sh
 pip install omnivista_py
 ```
 
-## Usage
+## Usage example
 
-### Initialization
+With omnivista_py, it has never been easier to search for a device and retrieve information about it.
 
-First, initialize the `OVClient` with the base URL of the API, username, password, and optional parameters for SSL verification and logging.
-
+Here is an example of how to initialize the client, search for 3 devices using three different attributes, and then print out their software version, configured IP interfaces, and the current directory they are running in.
 ```python
-from omnivista_py import OVClient
+from omnivista_py import OVClient, Device
 
 client = OVClient(
-    url="https://omnivista.company.de",
+    url="https://omnivista.com",
     username="your_username",
-    password="your_password",
-    verify=True,  # Optional, default is True
-    log=True      # Optional, default is False
+    password="your_password"
 )
+client.login
+
+device1 = client.Device(client, ip_address="192.168.1.1")
+device2 = client.Device(client, hostname="myalcateldevice")
+device3 = client.Device(client, mac_address="3a:5f:1c:7e:2b:9d")
+
+devices = [device1, device2, device3]
+
+for device in devices:
+    print(device.get_software_version())
+    print(device.get_ip_interfaces())
+    print(device.get_running_directory())
 ```
 
-### Authentication
+You can find more examples [here]()
 
-Log in to the API:
+## Future Plans
+There are several features and improvements planned for future releases of omnivita_py.
+Which you can find all under [Projects](https://github.com/phillipyosief/omnivista_py/projects)
 
-```python
-client.login()
-```
 
-### Device Management
+## Meta
 
-#### Get All Devices
+Phillip Jerome Yosief
 
-Retrieve a list of all devices:
+Distributed under the MIT license. See [``LICENSE``](LICENSE) for more information.
 
-```python
-devices = client.get_all_devices()
-```
+[github.com/phillipyosief/](https://github.com/phillipyosief/)
 
-#### Device Information
+## Contributing
 
-Create a `Device` instance and retrieve various information:
-
-```python
-device = client.Device(client, ip_address="192.168.1.1")
-
-# Get all information
-info = device.get_all_information()
-
-# Get specific details
-hostname = device.get_hostname()
-ip_address = device.get_ip_address()
-mac_address = device.get_mac_address()
-model_name = device.get_model_name()
-running_directory = device.get_running_directory()
-location = device.get_location()
-description = device.get_description()
-software_version = device.get_software_version()
-software_version_advanced = device.get_software_version_advanced()
-ip_interfaces = device.get_ip_interfaces()
-```
-
-## Error Handling
-
-The library includes custom exceptions for error handling:
-
-- `APIClientError`: Base class for exceptions in this module.
-- `AuthenticationError`: Raised for authentication-related errors.
-- `DeviceRetrievalError`: Raised when retrieving devices fails.
-- `LoginError`: Raised when login fails.
-
-Example:
-
-```python
-try:
-    client.login()
-except LoginError as e:
-    print(f"Login failed: {e}")
-```
-
-## License
-
-This project is licensed under the MIT License.
+1. Fork it (<https://github.com/phillipyosief/omnivista_py/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request

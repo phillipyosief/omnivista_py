@@ -4,6 +4,7 @@
 ![PyPI - Version](https://img.shields.io/pypi/v/omnivista_py)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/omnivista_py)
 ![PyPI - Wheel](https://img.shields.io/pypi/wheel/omnivista_py)
+[![Build & Publish to PyPi](https://github.com/phillipyosief/omnivista_py/actions/workflows/python_publish.yml/badge.svg)](https://github.com/phillipyosief/omnivista_py/actions/workflows/python_publish.yml)
 
 omnivista_py allows easy management of network devices, and querying of performance data. With integrated error handling and optional logging
 

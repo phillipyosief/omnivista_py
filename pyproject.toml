@@ -8,6 +8,7 @@ version = "0.3.7"
 authors = [
   { name="Phillip Jerome Yosief", email="phillip.yosief@outlook.com" },
 ]
+keywords = ["OmniVista 2500, "Alcatel API", "Alcatel Python", "Alcatel Lucent", "Alcatel", "OmniVista", "API", "network management", "device management", "performance data", "automation", "network monitoring", "Python"]
 description = "A Python library that simplifies interaction with the OmniVista API, enabling easy authentication, device management, and performance data querying."
 readme = "README.md"
 requires-python = ">=3.9"
@@ -16,6 +17,8 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+
+
 
 [project.urls]
 Homepage = "https://github.com/phillipyosief/omnivista_py"

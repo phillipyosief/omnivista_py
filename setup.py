@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='omnivista_py',
-    version='0.3.6',
+    version='0.3.8',
     packages=find_packages(),
     install_requires=['requests'],
     description='A Python library that simplifies interaction with the OmniVista API, enabling easy authentication, device management, and performance data querying.',

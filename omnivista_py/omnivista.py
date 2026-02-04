@@ -86,7 +86,7 @@ class OVClient:
     def _get_all_devices(self):
         """Get the list of devices from the API."""
         self._log("Getting devices...")
-        return self._get("api/devices")  # Verwende die neue _get-Methode
+        return self._get("api/devices")
     
     def get_all_devices(self):
         """Get the list of devices from the API."""
